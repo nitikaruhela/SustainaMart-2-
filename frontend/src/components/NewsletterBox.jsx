@@ -3,7 +3,7 @@ import React from 'react'
 const NewsletterBox = () => {
 
     const onSubmithandler = (event) => {
-        event.preventDefault();
+        event.preventDefault(); 
 
     }
   return (

@@ -34,7 +34,7 @@ const Collection = () => {
     let productsCopy = products.slice();
 
     if (showSearch && search) {
-      productsCopy = productsCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase))
+      productsCopy = productsCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
     }
     if (category.length > 0) {
       productsCopy = productsCopy.filter(item => category.includes(item.category));
@@ -70,7 +70,7 @@ const Collection = () => {
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
       <div className='min-w-60'>
-        <p onClick={() => setShowFilter(!showFilter)} className='my-2 text-xl flex items-center cursor-pointer gap-2'>FILTERS <img className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : ''}`} src={assets.dropdown_icon} alt="" /></p>
+        <p onClick={() => setShowFilter(!showFilter)} className='my-2 text-xl flex items-center cursor-pointer gap-2'>FILTERS <img className={`h-3 ${showFilter ? 'rotate-90' : ''}`} src={assets.dropdown_icon} alt="" /></p>
         <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'}`}>
           <p className='mb-3 text-sm font-medium'>CATEGORIES</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
@@ -83,11 +83,27 @@ const Collection = () => {
             <p className='flex gap-2'>
               <input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory} />Kids
             </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory} />Skincare & Beauty
+            </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory} />Personal Care & Hygiene
+            </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory} />Clothing & Accessories
+            </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory} />Home & Kitchen
+            </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory} />Zero Waste Essentials
+            </p>
+
 
           </div>
 
         </div>
-        <div className={`border border-gray-300 pl-5 py-3 my-5 ${showFilter ? ' ' : 'hidden'}`}>
+        <div className={`border border-gray-300 pl-5 py-3 my-5 ${showFilter ? '' : 'hidden'}`}>
           <p className='mb-3 text-sm font-medium'>TYPE</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
             <p className='flex gap-2'>
@@ -98,6 +114,21 @@ const Collection = () => {
             </p>
             <p className='flex gap-2'>
               <input className='w-3' type="checkbox" value={'Winterwear'} onChange={toggleSubCategory} />Winterwear
+            </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Winterwear'} onChange={toggleSubCategory} />Face Care
+            </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Winterwear'} onChange={toggleSubCategory} />Body Care
+            </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Winterwear'} onChange={toggleSubCategory} />Hair Care
+            </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Winterwear'} onChange={toggleSubCategory} />Organic Cotton Clothing
+            </p>
+            <p className='flex gap-2'>
+              <input className='w-3' type="checkbox" value={'Winterwear'} onChange={toggleSubCategory} />Reusable Bags & Bottles
             </p>
 
           </div>

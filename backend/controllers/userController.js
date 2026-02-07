@@ -2,7 +2,7 @@ import validator from 'validator';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import userModel from '../models/userModel.js';
-import e from 'express';
+import express from 'express';
 
 
 const createToken = (id) => {
@@ -90,9 +90,9 @@ const registerUser = async (req, res) => {
 }
 
 //Route for admin login
-constadminlogin = async (req, res) => {
+const adminlogin = async (req, res) => {
 
 }
 
 
-export { loginuser, registerUser, adminlogin }
+export { loginUser, registerUser, adminlogin }

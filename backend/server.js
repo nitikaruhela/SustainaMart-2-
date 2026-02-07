@@ -5,6 +5,7 @@ import { connect } from 'mongoose'
 import connectDB from './config/mongodb.js'
 import connectCloudinary from './config/cloudinary.js'
 import productRouter from './routes/productRoute.js'
+import userRouter from './routes/userRoute.js'
 
 //App Config
 const app = express()
